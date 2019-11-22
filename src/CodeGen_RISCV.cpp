@@ -21,7 +21,33 @@ string CodeGen_RISCV::mcpu() const {
 }
 
 string CodeGen_RISCV::mattrs() const {
-    return "";
+    string mattrs = "";
+    if (target.has_feature(Target::RISCV_A)) {
+        mattrs += "+a,";
+    }
+    if (target.has_feature(Target::RISCV_C)) {
+        mattrs += "+c,";
+    }
+    if (target.has_feature(Target::RISCV_D)) {
+        mattrs += "+d,";
+    }
+    if (target.has_feature(Target::RISCV_E)) {
+        mattrs += "+e,";
+    }
+    if (target.has_feature(Target::RISCV_F)) {
+        mattrs += "+f,";
+    }
+    if (target.has_feature(Target::RISCV_M)) {
+        mattrs += "+m,";
+    }
+    if (target.has_feature(Target::RISCV_RELAX)) {
+        mattrs += "+relax,";
+    }
+    // Remove last comma if there is one
+    if (mattrs.size () > 0) {
+        mattrs.pop_back();
+    }
+    return mattrs;
 }
 
 bool CodeGen_RISCV::use_soft_float_abi() const {

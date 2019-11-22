@@ -881,7 +881,7 @@ bool Target::get_runtime_compatible_target(const Target &other, Target &result) 
                                                      CUDACapability30, CUDACapability32, CUDACapability35, CUDACapability50, CUDACapability61,
                                                      HVX_v62, HVX_v65, HVX_v66}};
 
-    const std::array<Feature, 12> intersection_features = {{SSE41, AVX, AVX2, FMA, FMA4, F16C, ARMv7s, VSX, AVX512, AVX512_KNL, AVX512_Skylake, AVX512_Cannonlake}};
+    const std::array<Feature, 19> intersection_features = {{SSE41, AVX, AVX2, FMA, FMA4, F16C, ARMv7s, VSX, AVX512, AVX512_KNL, AVX512_Skylake, AVX512_Cannonlake, RISCV_A, RISCV_C, RISCV_D, RISCV_E, RISCV_F, RISCV_M, RISCV_RELAX}};
 
     const std::array<Feature, 10> matching_features = {{SoftFloatABI, Debug, TSAN, ASAN, MSAN, HVX_64, HVX_128, HexagonDma, HVX_shared_object}};
 

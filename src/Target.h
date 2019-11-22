@@ -121,6 +121,13 @@ struct Target {
         WasmSignExt = halide_target_feature_wasm_signext,
         SVE = halide_target_feature_sve,
         SVE2 = halide_target_feature_sve2,
+        RISCV_A = halide_target_feature_riscv_a,
+        RISCV_C = halide_target_feature_riscv_c,
+        RISCV_D = halide_target_feature_riscv_d,
+        RISCV_E = halide_target_feature_riscv_e,
+        RISCV_F = halide_target_feature_riscv_f,
+        RISCV_M = halide_target_feature_riscv_m,
+        RISCV_RELAX = halide_target_feature_riscv_relax,
         FeatureEnd = halide_target_feature_end
     };
     Target()
