@@ -1315,6 +1315,13 @@ typedef enum halide_target_feature_t {
     halide_target_feature_sve,                    ///< Enable ARM Scalable Vector Extensions
     halide_target_feature_sve2,                   ///< Enable ARM Scalable Vector Extensions v2
     halide_target_feature_egl,                    ///< Force use of EGL support.
+    halide_target_feature_riscv_a,                ///< Enable RISC-V A Extension (Atomic Instructions).
+    halide_target_feature_riscv_c,                ///< Enable RISC-V C Extension (Compressed Instructions).
+    halide_target_feature_riscv_d,                ///< Enable RISC-V D Extension (Double-Precision Floating-Point).
+    halide_target_feature_riscv_e,                ///< Implements RV32E (provides 16 rather than 32 GPRs).
+    halide_target_feature_riscv_f,                ///< Enable RISC-V F Extension (Single-Precision Floating-Point).
+    halide_target_feature_riscv_m,                ///< Enable RISC-V M Extension (Integer Multiplication and Division).
+    halide_target_feature_riscv_relax,            ///< Enable RISC-V Linker relaxation
 
     halide_target_feature_arm_dot_prod,  ///< Enable ARMv8.2-a dotprod extension (i.e. udot and sdot instructions)
     halide_target_feature_end            ///< A sentinel. Every target is considered to have this feature, and setting this feature does nothing.
