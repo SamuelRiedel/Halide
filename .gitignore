@@ -12,6 +12,7 @@ build-ios/*
 build-osx/*
 cmake_build*/*
 */build/*
+build/
 tmp/*
 include/*
 distrib/*
