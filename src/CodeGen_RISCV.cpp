@@ -17,7 +17,7 @@ CodeGen_RISCV::CodeGen_RISCV(Target t)
 }
 
 string CodeGen_RISCV::mcpu() const {
-    return "";
+    return "mempool-rv32";
 }
 
 string CodeGen_RISCV::mattrs() const {
