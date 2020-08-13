@@ -525,12 +525,18 @@ llvm::Triple get_triple_for_target(const Target &target) {
             triple.setArch(llvm::Triple::riscv64);
         }
 
+        // TODO: Make this a feature which will enable this target triple
+        if (true) {
+        	triple.setVendor(llvm::Triple::MemPool);
+				}
+
         if (target.os == Target::Linux) {
             triple.setOS(llvm::Triple::Linux);
             // TODO: Check what options there are here.
             triple.setEnvironment(llvm::Triple::GNUEABIHF);
         } else if (target.os == Target::NoOS) {
             // for baremetal environment
+            triple.setOS(llvm::Triple::UnknownOS);
         } else {
             user_error << "No RISCV support for this OS\n";
         }
